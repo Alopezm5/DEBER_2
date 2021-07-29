@@ -28,8 +28,12 @@ class Cadena:
         print("El caracter:{}  - Se encuentra en el puesto: {}".format(self.caracter,puesto))
 
 
-    def listaPalabras(self):
-        pass
+    def listaPalabras(self,pal=""):
+        self.pal=pal
+        self.pal = self.cadena.split()
+        print(self.pal)
+        print(len(self.pal))
+    
     def cadenaLista(self):
         pass
     def insertarDato(self, buscado, posicion):
