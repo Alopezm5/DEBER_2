@@ -20,11 +20,13 @@ class Cadena:
 
     def listaPosiciones(self, caracter=""):
         self.caracter= caracter
-        self.caracter=input("ingrese El caracter a buscar en lista: ")
+        self.caracter=input("Ingrese el caracter a buscar en lista: ")
+        puesto=[]
         for j, l in enumerate(self.cadena):
-            print("Caracter: %s - Puesto: %i " % (l,j))
-            if self.cadena[j]==caracter:
-                print("El caracter: %s  - Se encuentra en el puesto: %i " % (l,j))
+            if self.cadena[j]==self.caracter:
+                puesto.append(j)
+        print("El caracter:{}  - Se encuentra en el puesto: {}".format(self.caracter,puesto))
+
 
     def listaPalabras(self):
         pass
