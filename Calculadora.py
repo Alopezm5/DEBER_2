@@ -48,3 +48,22 @@ class calEstandar(Calculadora):
             print("{} es el numero ingresado, y en absoluto es:{}".format(self.numero,-1*self.numero))
         else:
             print("{} es el numero ingresado, y en absoluto es:{}".format(self.numero,self.numero))
+
+
+class calCientifica(Calculadora):
+    pi=3.1416
+    def __init__(self,numero1,numero2):
+        super().__init__(numero1,numero2)
+
+    def circunferencia(self,radio=0):
+        radio=float(input("Ingresar radio:"))
+        print("2 * {} * {} = {}".format(self.pi,radio,((2*self.pi)*radio)))
+
+    def areaCirculo(self,radio=0):
+        radio = float(input("Ingresar radio:"))
+        print("{} * ({} **2) = {}".format(self.pi, radio, self.pi*(radio**2)))
+
+    def areaCuadrado(self,lado=0):
+        lado = float(input("Ingresar lado:"))
+        print("{} * {} = {}".format(lado,lado,lado*lado))
+
