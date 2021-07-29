@@ -15,9 +15,7 @@ class Cadena:
         for i in range(len(self.cadena)):
             if (self.cadena[i] == self.buscado):
                 con += 1
-                print("En el caracter: " + str(i))
-            # else:
-            #     print("No hay Coincidencia")
+                print("En la posicion: " + str(i))
         print("Existe solo: " + str(con) + " veces el caracter:" + self.buscado)
 
     def listaPosiciones(self, caracter=""):
