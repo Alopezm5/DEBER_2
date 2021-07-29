@@ -25,3 +25,26 @@ class Calculadora:
             print("No hay división para 0")
         else:
             print("{} / {} = {} ".format(self.numero1, self.numero2, self.numero1 / self.numero2))
+
+
+class calEstandar(Calculadora):
+    def __init__(self, numero1=0, numero2=0):
+        super().__init__(numero1, numero2)
+
+    # def multiplicacion2(self):
+    #     self.numero1=int(input("Ingresar numero 1: "))
+    #     self.numero2 = int(input("Ingresar numero 2: "))
+    #     print("{} * {} = {}".format(self.numero1,self.numero2,self.numero1 * self.numero2))
+
+    def exponente(self):
+        self.numero1 = int(input("Ingresar numero 1: "))
+        self.numero2 = int(input("Ingresar numero 2: "))
+        print("{} ** {} = {}".format(self.numero1, self.numero2, self.numero1 ** self.numero2))
+
+    def valorAbsoluto(self, numero=0):
+        self.numero=numero
+        self.numero=int(input("Ingresar numero"))
+        if self.numero<0:
+            print("{} es el numero ingresado, y en absoluto es:{}".format(self.numero,-1*self.numero))
+        else:
+            print("{} es el numero ingresado, y en absoluto es:{}".format(self.numero,self.numero))
