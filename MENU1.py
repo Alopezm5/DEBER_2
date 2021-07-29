@@ -1,3 +1,6 @@
+from Calculadora import Calculadora
+from Calculadora import calEstandar
+from Calculadora import calCientifica
 from Cadena import Cadena
 class MENU():
     def __init__(self,titulo,opciones=[]):
