@@ -35,7 +35,15 @@ class Cadena:
         print(len(self.pal))
     
     def cadenaLista(self):
-        pass
+        self.pal = self.cadena.split()
+        Palabras=str(input("Si desea ingresar mas palabra hagalo, caso contrario para finaizar ingrese un puntito\n"))
+        while Palabras!=".":
+            self.pal.append(Palabras)
+            Palabras=str(input("Si desea ingresar mas palabra hagalo, caso contrario para finaizar ingrese un puntito\n"))
+        print("La Lista seria", (self.pal))
+        Cade=" ".join(self.pal)
+        print("La Cadena seria\n"+ str(Cade))
+    
     def insertarDato(self, buscado, posicion):
         pass
     def eliminarOcurrencias(self,buscado):
