@@ -1,6 +1,12 @@
 class Basico:
     def numerosN1(n):
-        pass
+        n=int(input("Ingresar un numero: "))
+        print('Numeros del 1 al ', n)
+        for i in range(1, n + 1):
+            if i == n:
+                print(str(i) + '.')
+            else:
+                print(str(i) + ', ', end='')
 
     def multiplo(numero):
         pass
