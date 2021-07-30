@@ -16,44 +16,45 @@ class MENU():
     
 salir=False
 while not salir:
-    menu1 = MENU("Menu Principal",["1)Calculadora", "2)Operación de Numeros", "3)Tratamientos de Listas", "4)Operaciones de Cadenas","5)Salir"])
-    opc = menu1.menu()
+    menu = MENU("Menu Principal",["1)Calculadora", "2)Operación de Numeros", "3)Tratamientos de Listas", "4)Operaciones de Cadenas","5)Salir"])
+    opc = menu.menu()
     if opc=="1":
-       menu2 = MENU("Menu Calculadora", ["1)Suma", "2)Resta", "3)Multiplicacion", "4)Division", "5)Exponente","6)Valor Absoluto", "7)Circunferencia", "8)Area Circulo", "9)Area Cuadrado", "10)Salir"])
-       opc2=menu2.menu()
-            if opc2=="1":
+        while not salir:
+            menu1 = MENU("Menu Calculadora", ["1)Suma", "2)Resta", "3)Multiplicacion", "4)Division", "5)Exponente","6)Valor Absoluto", "7)Circunferencia", "8)Area Circulo", "9)Area Cuadrado", "10)Salir"])
+            opc1=menu1.menu()
+            if opc1=="1":
                 cal=Calculadora(0,0)
                 cal.suma()
-            elif opc2=="2":
+            elif opc1=="2":
                 cal = Calculadora(0,0)
                 cal.resta()
-            elif opc2=="3":
+            elif opc1=="3":
                 cal = Calculadora(0,0)
                 cal.multiplicacion1()
-            elif opc2=="4":
+            elif opc1=="4":
                 cal = Calculadora(0,0)
                 cal.division()
-            elif opc2=="5":
+            elif opc1=="5":
                 cale = calEstandar(0, 0)
                 cale.exponente()
-            elif opc2=="6":
+            elif opc1=="6":
                 cale=calEstandar(0)
                 cale.valorAbsoluto()
-            elif opc2=="7":
+            elif opc1=="7":
                 calCi = calCientifica(0,0)
                 calCi.circunferencia()
-            elif opc2=="8":
+            elif opc1=="8":
                 calCi = calCientifica(0, 0)
                 calCi.areaCirculo()
-            elif opc2=="9":
+            elif opc1=="9":
                 calCi = calCientifica(0,0)
                 calCi.areaCuadrado()
-            elif opc2=="10":
+            elif opc1=="10":
                 print("Regresando al menú principal........")
                 salir=True
             else:
                 print("Ingreso mal la opcion")
-                opc2=menu2.menu()
+                opc1=menu1.menu()
         salir=False
     elif opc=="2":
         menu2 = MENU("Menu Operación Numero ", ["1)", "2)", "3)", "4)", "5)", "6)", "7)", "8)", "9)", "10)", "11)"])
