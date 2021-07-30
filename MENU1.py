@@ -1,7 +1,10 @@
 from Calculadora import Calculadora
 from Calculadora import calEstandar
 from Calculadora import calCientifica
+from Operaciones import Basico
+from Operaciones import Intermedio
 from Cadena import Cadena
+
 class MENU():
     def __init__(self,titulo,opciones=[]):
         self.titulo=titulo
@@ -57,8 +60,46 @@ while not salir:
                 opc1=menu1.menu()
         salir=False
     elif opc=="2":
-        menu2 = MENU("Menu Operación Numero ", ["1)", "2)", "3)", "4)", "5)", "6)", "7)", "8)", "9)", "10)", "11)"])
-        opc2=menu2.menu()
+        while not salir:
+            menu2 = MENU("Menu Operación Numero ", ["1)Presentar los numeros de 1 a n", "2)Sumar los numeros de 1 a n", "3)Multiplos de cualquier numero", "4)Presentar los divisores de un numero", "5)Numero Primo", "6)Factorial de cualquier numero", "7)Fibonacci de una serie de n numeros", "8)Perfecto", "9)Primo gemelo", "10)Numeros amigos", "11)Salir"])
+            opc2=menu2.menu()
+            if opc2 == "1":
+                ope = Basico()
+                ope.numerosN1()
+            elif opc2 == "2":
+                ope = Basico()
+                ope.multiplo()
+            elif opc2 == "3":
+                ope = Basico()
+                ope.DivisoresNumero()
+            elif opc2 == "4":
+                ope = Basico()
+                ope.primo()
+            elif opc2 == "5":
+                ope = Basico()
+                ope.perfecto()
+            elif opc2 == "6":
+                ope = Intermedio()
+                ope.factorial()
+            elif opc2 == "7":
+                ope = Intermedio()
+                ope.fibonacci()
+            elif opc2 == "8":
+                ope = Intermedio()
+                ope.perfecto()
+            elif opc2 == "9":
+                ope = Intermedio()
+                ope.primosGemelos()
+            elif opc2 == "10":
+                ope=Intermedio()
+                ope.amigos()
+            elif opc2 == "11":
+                print("Regresando al menú principal........")
+                salir = True
+            else:
+                print("Ingreso mal la opcion")
+                opc2 = menu2.menu()
+        salir = False
     elif opc=="3":
         menu3=MENU("Menu Tratamiento de Lista", ["1)Recorrer y presentar los datos", "2)Buscar un valor en una lista", "3)Retornar una lista con los factoriales", "4)Retornar una lista de números primos", "5)Recorrer una lista de diccionario con notas de alumnos","6)Insertar un dato en una Lista dada lo Posición","7)Eliminar todas las ocurrencias en una Lista","8)Retornar cualquier valor de una lista eliminándolo","9)Copiar cada elemento de una tupla en una lista","10)Dar el vuelto a varios clientes","11)Salir"])
         opc3=menu3.menu()
