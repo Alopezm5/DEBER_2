@@ -59,19 +59,87 @@ class Basico:
 
 class Intermedio(Basico):
 
-    def numerosN2(n):  # aplicar polimorfismo
-        pass
+    # def numerosN2(n):  # aplicar polimorfismo
+    #     n = int(input("Ingresar numero"))
+    #     print('Suma del número 1 al', n)
+    #     sum = 0
+    #     for i in range(1, n + 1):
+    #         sum += i
+    #     print('La suma es:', sum)
 
-    def factorial(numero):  #
-        pass
+    def factorial(numero):
+        numero=int(input("Ingresar numero: "))
+        fact = 1
+        if numero != 0:
+            for i in range(1, numero + 1):
+                fact *= i
+        print('El factorial de {} es: {}'.format(numero,fact))
 
     def fibonacci(n):
-        pass
+        n=int(input("Ingresar numero: "))
+        print('Fibonacci hasta el', n, '\n' + '0')
+        for i in range(n - 1):
+            a = 0
+            b = 1
+            for j in range(i):
+                c = a + b
+                a = b
+                b = c
+            print(b)
 
-    def primosGemelos(num1, num2):
-        pass
+    def primosGemelos(num1=0, num2=0):
+        num1=int(input("Ingresar un numero menor: "))
+        num2=int(input("Ingresar un numero mayor: "))
+        if num1 != num2:
+            a,b = 0,0
+            if num1 > num2:
+                n3 = num1
+                num1 = num2
+                num2 = n3
+            print('Números primos gemelos del', num1, 'al', num2)
+            if num2 > 4:
+                for i in range(num1, num2 + 1):
+                    incremento = 2
+                    primo = True
+                    while primo and incremento < i:
+                        if i % incremento == 0:
+                            primo = False
+                        else:
+                            incremento += 1
+                    if primo and not a:
+                        a = i
+                    elif primo and a:
+                        b = i
+                        if b - a == 2:
+                            print(a, 'y', b, 'son números primos gemelos.')
+                        a = i
+            else:
+                print('No hay números gemelos.')
+        else:
+            print('Ingrese números diferentes')
 
-    def amigos(num1, num2):
-        pass
+    def amigos(num1=0, num2=0):
+        while True:
+            num1 = int(input("Ingresar numero 1: "))
+            num2 = int(input("Ingresar numero 2: "))
+            if num1 != num2:
+                suma_a, suma_b = 0, 0
+                if num1 > num2:
+                    n3 = num1
+                    num1 = num2
+                    num2 = n3
+                for cont in range(1, num1 + 1):
+                    if num1 % cont == 0:
+                        suma_a += cont
+                for cont in range(1, num2 + 1):
+                    if num2 % cont == 0:
+                        suma_b += cont
+                if suma_a == suma_b and suma_b == suma_a:
+                    print(' >Son amigos')
+                    break
+                else:
+                    print(' >No son amigos')
+                    break
+            print('Ingrese números diferentes')
 
 
