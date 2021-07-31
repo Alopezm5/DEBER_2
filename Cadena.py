@@ -45,7 +45,13 @@ class Cadena:
         print("La Cadena seria\n"+ str(Cade))
     
     def insertarDato(self, buscado, posicion):
-        pass
+        self.dato = self.cadena.split()
+        print(self.dato,"Esta cadena tiene {} posiciones".format(len(self.dato)))
+        buscado=input("Ingresar dato a ser aumentado en la cadena: ")
+        posicion=int(input("Ingresar la posicion a agregar el dado en la cadena: "))
+        self.dato.insert(posicion,buscado)
+        print(self.dato)
+        
     def eliminarOcurrencias(self,buscado):
         pass
     def retornaValor(self,posicion):
