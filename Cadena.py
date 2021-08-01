@@ -72,21 +72,24 @@ class Cadena:
         Cad1 = ''.join( x for x in Cad1 if x not in buscado1)
         print("La Cadena quedaria como\n" + str(Cad1))
         
-    def retornaValor(posicion):
+    def RetornarValor(posicion):
         Lista5=[]
         Lista6=[]
         posicion = str(input("Ingrese una palabra, al finaizar use el punto\n"))
         while posicion!=".":
             Lista5.append(posicion)
             posicion=str(input("Ingrese una palabra, al finaizar use el punto\n"))
-        print("La Lista seria\n"+ str(Lista5))
+        Cad1=" ".join(Lista5)
+        print("La Cadena seria\n"+ str(Cad1))
+        Lista7=Cad1.split()
         lugar=int(input("Que posicion de la lista desea eliminar\n "))
         Lista6.append(lugar)
         print("El Elemento borrado es {}".format(Lista6))
         Retorno=Lista5[lugar]
-        Lista5.pop(lugar)
+        Lista7.pop(lugar)
+        Cad1=" ".join(Lista7)
         print("El elemento a eliminar es {}\n ".format(Retorno))
-        print("La lista seria {}\n" .format(Lista5))
+        print("La Cadena seria {}\n" .format(Cad1))
     
     def concatenarCadena(self,dato):
         Lista4=[]
