@@ -69,4 +69,10 @@ class Cadena:
     def retornaValor(self,posicion):
         pass
     def concatenarCadena(self,dato):
-        pass
+        Lista4=[]
+        while dato!=".":
+            Lista4.append(dato)
+            dato=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        ##print("La Lista seria\n"+ str(Lista))
+        Cad=" ".join(Lista4)
+        print("La Cadena seria\n"+ str(Cad))
