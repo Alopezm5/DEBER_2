@@ -69,10 +69,20 @@ class Lista(Intermedio):
     
     # def listaNotas(listaNotasDicccionario):
    #     pass
-   #
-   # def insertarLista(valor, posicion):
-   #     pass
-   #
+   
+    def insertarLista(valor):
+        Lista=[]
+        #Valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        while Valor!=".":
+            Lista.append(Valor)
+            Valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        print("La Lista seria\n"+ str(Lista))
+        buscado1=str(input("Ingrese lo que desea agregar a la lista\n"))
+        Posicion=int(input("Ingrese en que posicion desea agregar el anadido\n"))
+        Lista.insert(Posicion, str(buscado1))
+        print("La Lista ahora es\n"+ str(Lista))
+   
+   
    # def eliminarLista(valor):
    #     pass
    #
