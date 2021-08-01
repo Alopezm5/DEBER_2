@@ -72,7 +72,7 @@ class Cadena:
         Cad1 = ''.join( x for x in Cad1 if x not in buscado1)
         print("La Cadena quedaria como\n" + str(Cad1))
         
-    def retornaValor(self,posicion):
+    def retornaValor(posicion):
         Lista5=[]
         Lista6=[]
         posicion = str(input("Ingrese una palabra, al finaizar use el punto\n"))
