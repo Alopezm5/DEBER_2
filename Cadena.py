@@ -75,6 +75,7 @@ class Cadena:
     def retornaValor(self,posicion):
         Lista5=[]
         Lista6=[]
+        posicion = str(input("Ingrese una palabra, al finaizar use el punto\n"))
         while posicion!=".":
             Lista5.append(posicion)
             posicion=str(input("Ingrese una palabra, al finaizar use el punto\n"))
