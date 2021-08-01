@@ -66,3 +66,22 @@ class Lista(Intermedio):
                    primos.append(i)
        print(primos)
     
+    
+    # def listaNotas(listaNotasDicccionario):
+   #     pass
+   #
+   # def insertarLista(valor, posicion):
+   #     pass
+   #
+   # def eliminarLista(valor):
+   #     pass
+   #
+   # def retornaValorLista(posicion):
+   #     pass
+   #
+   # def copiarTuplaLista(tupla):
+   #     pass
+   #
+   # def vueltoLista(listaClientesDiccionario):
+   #     pass
+
