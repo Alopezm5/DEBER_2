@@ -42,5 +42,27 @@ class Lista(Intermedio):
            lista.append([numero, fact])
            avan=input("Desea ingresar mas numeros").upper()
        print("El primer valor en cada sublista es el numero ingresado y el segundo valor es el resultado factorial\n" , lista)
-
-
+    
+    def listaPrimo(self):
+       n = int(input("Ingrese un numero, este indicará cuantos datos se va a ingresar en la siguiente lista: "))
+       lista = []
+       i=1
+       while i<=n:
+           numero = int(input("Ingresar numero: "))
+           lista.append(numero)
+           i += 1
+       print("La lista de numeros ingresado es:",lista)
+       print("Solo son primos:")
+       primos=[]
+       for i in lista:
+           p = 0
+           if i == 1:
+               primos.append(i)
+           else:
+               for j in range(1, i + 1):
+                   if i % j == 0:
+                       p += 1
+               if p == 2:
+                   primos.append(i)
+       print(primos)
+    
