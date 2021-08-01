@@ -1,14 +1,15 @@
 class Cadena:
     def __init__(self, cadena=""):
         self.cadena=cadena
-        self.cadena = input("Ingresar cadena:")
 
     def recorrerCadena(self):
+        self.cadena = input("Ingresar cadena:")
         print("La cadena es: '{}'y cuenta con:{} caracteres".format(self.cadena, len(self.cadena)))
         # for i, c in enumerate(self.cadena):
         #     print('Caracter: %s' % (c))
 
     def buscarCaracter(self, buscado=0):
+        self.cadena = input("Ingresar cadena:")
         self.buscado= buscado
         con=0
         self.buscado=input("Ingresar el caracter a ser buscado")
@@ -19,6 +20,7 @@ class Cadena:
         print("Existe solo: " + str(con) + " veces el caracter:" + self.buscado)
 
     def listaPosiciones(self, caracter=""):
+        self.cadena = input("Ingresar cadena:")
         self.caracter= caracter
         self.caracter=input("Ingrese el caracter a buscar en lista: ")
         puesto=[]
@@ -29,12 +31,14 @@ class Cadena:
 
 
     def listaPalabras(self,pal=""):
+        self.cadena = input("Ingresar cadena:")
         self.pal=pal
         self.pal = self.cadena.split()
         print(self.pal)
         print(len(self.pal))
     
     def cadenaLista(self):
+        self.cadena = input("Ingresar cadena:")
         self.pal = self.cadena.split()
         Palabras=str(input("Si desea ingresar mas palabra hagalo, caso contrario para finaizar ingrese un puntito\n"))
         while Palabras!=".":
@@ -45,6 +49,7 @@ class Cadena:
         print("La Cadena seria\n"+ str(Cade))
     
     def insertarDato(self, buscado, posicion):
+        self.cadena = input("Ingresar cadena:")
         self.dato = self.cadena.split()
         print(self.dato,"Esta cadena tiene {} posiciones".format(len(self.dato)))
         buscado=input("Ingresar dato a ser aumentado en la cadena: ")
