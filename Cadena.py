@@ -53,7 +53,19 @@ class Cadena:
         print(self.dato)
         
     def eliminarOcurrencias(self,buscado):
-        pass
+        import re
+        Lista1=[]
+        while buscado!=".":
+            Lista1.append(buscado)
+            buscado=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        print("La Lista seria\n"+ str(Lista1))
+        buscado1=str(input("Ingrese la concurrencia que desea eliminar de la lista\n"))
+        oncurrencia=len(re.findall(str(buscado1), str(Lista1)))
+        print('La Concurrencia de su caracter es:',oncurrencia)
+        Cad1=" ".join(Lista1)
+        print("La Cadena seria\n"+ str(Cad1))
+        Cad1 = ''.join( x for x in Cad1 if x not in buscado1)
+        print("La Cadena quedaria como\n" + str(Cad1))
     def retornaValor(self,posicion):
         pass
     def concatenarCadena(self,dato):
