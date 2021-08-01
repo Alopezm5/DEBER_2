@@ -28,3 +28,19 @@ class Lista(Intermedio):
             if self.lista[i] in valor:
                 con += 1
         print("Existe solo: " + str(con) + " veces el caracter:" + valor)
+    
+    def listaFactorial(self):
+       lista=[]
+       avan="SI"
+       while avan=="SI":
+           numero = int(input("Ingresar numero: "))
+           fact = 1
+           if numero != 0:
+               for i in range(1, numero + 1):
+                   fact *= i
+           print('El factorial de {} es: {}'.format(numero, fact))
+           lista.append([numero, fact])
+           avan=input("Desea ingresar mas numeros").upper()
+       print("El primer valor en cada sublista es el numero ingresado y el segundo valor es el resultado factorial\n" , lista)
+
+
