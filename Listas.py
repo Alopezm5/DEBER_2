@@ -84,20 +84,19 @@ class Lista(Intermedio):
    
    
     def eliminarlista(valor):
-        Lista5=[]
-        Lista6=[]
-        #posicion = str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        import re
+        Lista1=[]
         while valor!=".":
-            Lista5.append(valor)
+            Lista1.append(valor)
             valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
-        print("La Lista seria\n"+ str(Lista5))
-        lugar=int(input("Que posicion de la lista desea eliminar\n "))
-        Lista6.append(lugar)
-        print("El Elemento borrado es {}".format(Lista6))
-        Retorno=Lista5[lugar]
-        Lista5.pop(lugar)
-        print("El elemento a eliminar es {}\n ".format(Retorno))
-        print("La lista seria {}\n" .format(Lista5))
+        print("La Lista seria\n"+ str(Lista1))
+        buscado1=str(input("Ingrese la concurrencia que desea eliminar de la lista\n"))
+        oncurrencia=len(re.findall(str(buscado1), str(Lista1)))
+        print('La Concurrencia de su caracter es:',oncurrencia)
+        Cad1=" ".join(Lista1)
+        Cad1 = ''.join( x for x in Cad1 if x not in buscado1)
+        lista12= Cad1.split()
+        print("La Lista quedaria como\n" + str(lista12))
    
    # def retornaValorLista(posicion):
    #     pass
