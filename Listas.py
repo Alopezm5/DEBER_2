@@ -67,8 +67,27 @@ class Lista(Intermedio):
        print(primos)
     
     
-    # def listaNotas(listaNotasDicccionario):
-   #     pass
+    def listaNotas(listaNotasDicccionario):
+        Listanombre = []
+        Lista=[]
+        notasjun=[]
+        alumnos=int(input("Cuantos alumnos va a ingresar"))
+        for al in range(alumnos):
+            al+=1
+            Listanota = []
+            nombre = input("Ingrese el nombre del alumno {}: ".format(al))
+            Listanombre.append(nombre)
+            notas = int(input("¿Cuantas notas va a ingresar por el estudiante {}?: ".format(nombre)))
+            for nota in range(notas):
+                nota+=1
+                no = round(float(input("Nota {}: ".format(nota))), 2)
+                notasjun.append(no)
+                Listanota.append(no)
+            listaNotasDiccionario = {"Nombre": nombre, "Notas": Listanota}
+            Lista.append(listaNotasDiccionario)
+        print("La lista de nombres es:{} ".format(Listanombre))
+        print("Las notas juntas de los alumnos quedan:{} ".format(notasjun))
+        print("El diccionario del nombre del alumno junto con sus notas es: {}".format(Lista))
    
     def insertarLista(valor="", posicion=0):
         Lista=[]
