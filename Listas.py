@@ -26,7 +26,7 @@ class Lista(Intermedio):
         for i in range(len(self.lista)):
             if self.lista[i] in valor:
                 con += 1
-        print("Existe solo: " + str(con) + " veces el caracter:" + valor)
+        print("Existe solo: " + str(con) + " veces el caracter: " + valor)
     
     def listaFactorial(self):
        lista=[]
@@ -39,7 +39,7 @@ class Lista(Intermedio):
                    fact *= i
            print('El factorial de {} es: {}'.format(numero, fact))
            lista.append([numero, fact])
-           avan=input("Desea ingresar mas numeros").upper()
+           avan=input("Desea ingresar mas numeros: ").upper()
        print("El primer valor en cada sublista es el numero ingresado y el segundo valor es el resultado factorial\n" , lista)
     
     def listaPrimo(self):
@@ -50,7 +50,7 @@ class Lista(Intermedio):
            numero = int(input("Ingresar numero: "))
            lista.append(numero)
            i += 1
-       print("La lista de numeros ingresado es:",lista)
+       print("La lista de numeros ingresado es: ",lista)
        print("Solo son primos:")
        primos=[]
        for i in lista:
@@ -69,7 +69,7 @@ class Lista(Intermedio):
         Listanombre = []
         Lista=[]
         notasjun=[]
-        alumnos=int(input("Cuantos alumnos va a ingresar"))
+        alumnos=int(input("Cuantos alumnos va a ingresar: "))
         for al in range(alumnos):
             al+=1
             Listanota = []
@@ -89,13 +89,13 @@ class Lista(Intermedio):
    
     def insertarLista(valor="", Posicion=0):
         Lista=[]
-        valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        valor=str(input("Ingrese una palabra, al finaizar use el punto(.) \n"))
         while valor!=".":
-            valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+            valor=str(input("Ingrese una palabra, al finaizar use el punto(.) \n"))
             Lista.append(valor)
         print("La Lista seria\n"+ str(Lista))
-        buscado1=str(input("Ingrese lo que desea agregar a la lista\n"))
-        posicion=int(input("Ingrese en que posicion desea agregar el anadido\n"))
+        buscado1=str(input("Ingrese lo que desea agregar a la lista: \n"))
+        posicion=int(input("Ingrese en que posicion desea agregar el anadido: \n"))
         Lista.insert(posicion, str(buscado1))
         print("La Lista ahora es\n"+ str(Lista))
    
@@ -103,12 +103,12 @@ class Lista(Intermedio):
         import re
         Lista1=[]
         while valor!=".":
-            valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+            valor=str(input("Ingrese una palabra, al finaizar use el punto(.) \n"))
             Lista1.append(valor)
         print("La Lista seria\n"+ str(Lista1))
-        buscado1=str(input("Ingrese la concurrencia que desea eliminar de la lista\n"))
+        buscado1=str(input("Ingrese la concurrencia que desea eliminar de la lista: \n"))
         oncurrencia=len(re.findall(str(buscado1), str(Lista1)))
-        print('La Concurrencia de su caracter es:',oncurrencia)
+        print('La Concurrencia de su caracter es: ',oncurrencia)
         Cad1=" ".join(Lista1)
         Cad1 = ''.join( x for x in Cad1 if x not in buscado1)
         lista12= Cad1.split()
@@ -119,23 +119,23 @@ class Lista(Intermedio):
         Lista6=[]
         #posicion = str(input("Ingrese una palabra, al finaizar use el punto\n"))
         while posicion!=".":
-            posicion=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+            posicion=str(input("Ingrese una palabra, al finaizar use el punto: \n"))
             Lista5.append(posicion)
         print("La Lista seria\n"+ str(Lista5))
-        lugar=int(input("Que posicion de la lista desea eliminar\n "))
+        lugar=int(input("Que posicion de la lista desea eliminar: \n "))
         Lista6.append(lugar)
-        print("El Elemento borrado es de la posicion {}".format(Lista6))
+        print("El Elemento borrado es de la posicion: {}".format(Lista6))
         Retorno=Lista5[lugar]
         Lista5.pop(lugar)
-        print("El elemento a eliminar es {}\n ".format(Retorno))
-        print("La lista nueva seria {}\n" .format(Lista5))
+        print("El elemento a eliminar es: {}\n ".format(Retorno))
+        print("La lista nueva seria: {}\n" .format(Lista5))
   
    def copiarTuplaLista(tupla):
         lista=[]
-        valor = input("Ingrese una palabra, para finaizar use el punto\n")
+        valor = input("Ingrese una palabra, para finaizar use el punto(.) \n")
         while valor!=".":
             lista.append(valor)
-            valor=input("Ingrese una palabra, para finaizar use el punto\n")
+            valor=input("Ingrese una palabra, para finaizar use el punto(.) \n")
             tupla= tuple(lista)
             lista= list(tupla)
         print(tupla)
