@@ -43,11 +43,11 @@ class calEstandar(Calculadora):
 
     def valorAbsoluto(self, numero=0):
         self.numero=numero
-        self.numero=int(input("Ingresar numero"))
+        self.numero=int(input("Ingresar numero: "))
         if self.numero<0:
-            print("{} es el numero ingresado, y en absoluto es:{}".format(self.numero,-1*self.numero))
+            print("{} es el numero ingresado, y en absoluto es: {}".format(self.numero,-1*self.numero))
         else:
-            print("{} es el numero ingresado, y en absoluto es:{}".format(self.numero,self.numero))
+            print("{} es el numero ingresado, y en absoluto es: {}".format(self.numero,self.numero))
 
 
 class calCientifica(Calculadora):
@@ -56,7 +56,7 @@ class calCientifica(Calculadora):
         super().__init__(numero1,numero2)
 
     def circunferencia(self,radio=0):
-        radio=float(input("Ingresar radio:"))
+        radio=float(input("Ingresar radio: "))
         print("2 * {} * {} = {}".format(self.pi,radio,((2*self.pi)*radio)))
 
     def areaCirculo(self,radio=0):
@@ -64,6 +64,6 @@ class calCientifica(Calculadora):
         print("{} * ({} **2) = {}".format(self.pi, radio, self.pi*(radio**2)))
 
     def areaCuadrado(self,lado=0):
-        lado = float(input("Ingresar lado:"))
+        lado = float(input("Ingresar lado: "))
         print("{} * {} = {}".format(lado,lado,lado*lado))
 
