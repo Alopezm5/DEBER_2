@@ -82,7 +82,6 @@ class Lista(Intermedio):
         Lista.insert(posicion, str(buscado1))
         print("La Lista ahora es\n"+ str(Lista))
    
-   
     def eliminarlista(valor):
         import re
         Lista1=[]
@@ -113,10 +112,18 @@ class Lista(Intermedio):
         Lista5.pop(lugar)
         print("El elemento a eliminar es {}\n ".format(Retorno))
         print("La lista nueva seria {}\n" .format(Lista5))
-   #
-   # def copiarTuplaLista(tupla):
-   #     pass
-   #
+  
+   def copiarTuplaLista(tupla):
+        lista=[]
+        valor = input("Ingrese una palabra, para finaizar use el punto\n")
+        while valor!=".":
+            lista.append(valor)
+            valor=input("Ingrese una palabra, para finaizar use el punto\n")
+            tupla= tuple(lista)
+            lista= list(tupla)
+        print(tupla)
+        print( "Copiamos la tupla en una lista y quedó: {}".format(lista))
+  
    # def vueltoLista(listaClientesDiccionario):
    #     pass
 
