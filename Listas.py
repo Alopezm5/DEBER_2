@@ -124,6 +124,15 @@ class Lista(Intermedio):
         print(tupla)
         print( "Copiamos la tupla en una lista y quedó: {}".format(lista))
   
-   # def vueltoLista(listaClientesDiccionario):
-   #     pass
+   def vueltoLista(listaClientesDiccionario):
+        lista = []
+        clientes=int(input("Cuantos clientes va a ingresar: "))
+        for cup in range(clientes):
+            "nombre{}".format(cup)
+            nombre= input("Ingrese el nombre del cliente: ")
+            cupo= float(input("¿Cuánto es el vuelto del cliente, ingresarlo {}?: ".format(nombre)))
+            listaClientesDiccionario = {"Nombre":nombre,"Vuelto":cupo}
+            lista.append(listaClientesDiccionario)
+        print( "La lista de los cliente son: {}".format(lista))
+  
 
