@@ -83,9 +83,22 @@ class Lista(Intermedio):
         print("La Lista ahora es\n"+ str(Lista))
    
    
-   # def eliminarLista(valor):
-   #     pass
-   #
+    def eliminarlista(valor):
+        Lista5=[]
+        Lista6=[]
+        #posicion = str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        while valor!=".":
+            Lista5.append(valor)
+            valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+        print("La Lista seria\n"+ str(Lista5))
+        lugar=int(input("Que posicion de la lista desea eliminar\n "))
+        Lista6.append(lugar)
+        print("El Elemento borrado es {}".format(Lista6))
+        Retorno=Lista5[lugar]
+        Lista5.pop(lugar)
+        print("El elemento a eliminar es {}\n ".format(Retorno))
+        print("La lista seria {}\n" .format(Lista5))
+   
    # def retornaValorLista(posicion):
    #     pass
    #
