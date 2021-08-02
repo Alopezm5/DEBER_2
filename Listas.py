@@ -87,8 +87,8 @@ class Lista(Intermedio):
         import re
         Lista1=[]
         while valor!=".":
-            Lista1.append(valor)
             valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+            Lista1.append(valor)
         print("La Lista seria\n"+ str(Lista1))
         buscado1=str(input("Ingrese la concurrencia que desea eliminar de la lista\n"))
         oncurrencia=len(re.findall(str(buscado1), str(Lista1)))
