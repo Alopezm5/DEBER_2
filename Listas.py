@@ -103,16 +103,16 @@ class Lista(Intermedio):
         Lista6=[]
         #posicion = str(input("Ingrese una palabra, al finaizar use el punto\n"))
         while posicion!=".":
-            Lista5.append(posicion)
             posicion=str(input("Ingrese una palabra, al finaizar use el punto\n"))
+            Lista5.append(posicion)
         print("La Lista seria\n"+ str(Lista5))
         lugar=int(input("Que posicion de la lista desea eliminar\n "))
         Lista6.append(lugar)
-        print("El Elemento borrado es {}".format(Lista6))
+        print("El Elemento borrado es de la posicion {}".format(Lista6))
         Retorno=Lista5[lugar]
         Lista5.pop(lugar)
         print("El elemento a eliminar es {}\n ".format(Retorno))
-        print("La lista seria {}\n" .format(Lista5))
+        print("La lista nueva seria {}\n" .format(Lista5))
    #
    # def copiarTuplaLista(tupla):
    #     pass
