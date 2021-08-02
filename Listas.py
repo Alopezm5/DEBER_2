@@ -4,23 +4,22 @@ class Lista(Intermedio):
     def __init__(self, lista=""):
         self.lista = lista
 
-
     def presentarLista(self):
         self.lista = self.lista.split()
-        nueva = str(input("Ingresar datos que desea tener en la lista, en caso de ingrear mas ingrese un puntito(.) \n"))
+        nueva = str(input("Ingresar datos que desea tener en la lista \n"))
         while nueva != ".":
             self.lista.append(nueva)
-            nueva = str(input("Si desea ingresar mas datos hagalo, caso contrario para finaizar ingrese un puntito\n"))
+            nueva = str(input("Si desea ingresar mas datos hagalo, caso contrario para finalizar ingrese un puntito(.) \n"))
         Cade = " ".join(self.lista)
         print("Los datos ingresados son: \n" + Cade)
         print("La lista es: '{}'y cuenta con:{} caracteres".format(self.lista, len(self.lista)))
     
     def buscarLista(self,valor=""):
         self.lista = self.lista.split()
-        nueva = str(input("Ingresar datos que desea tener en la lista, en caso de ingrear mas ingrese un puntito(.) \n"))
+        nueva = str(input("Ingresar datos que desea tener en la lista \n"))
         while nueva != ".":
             self.lista.append(nueva)
-            nueva = str(input("Si desea ingresar mas datos hagalo, caso contrario para finaizar ingrese un puntito\n"))
+            nueva = str(input("Si desea ingresar mas datos hagalo, caso contrario para finalizar ingrese un puntito\n"))
         print("La lista es: '{}'y cuenta con:{} caracteres".format(self.lista, len(self.lista)))
         con = 0
         valor = str(input("Ingresar el dato a ser buscado: "))
@@ -66,7 +65,6 @@ class Lista(Intermedio):
                    primos.append(i)
        print(primos)
     
-    
     def listaNotas(listaNotasDicccionario):
         Listanombre = []
         Lista=[]
@@ -89,7 +87,7 @@ class Lista(Intermedio):
         print("Las notas juntas de los alumnos quedan:{} ".format(notasjun))
         print("El diccionario del nombre del alumno junto con sus notas es: {}".format(Lista))
    
-    def insertarLista(valor="", posicion=0):
+    def insertarLista(valor="", Posicion=0):
         Lista=[]
         valor=str(input("Ingrese una palabra, al finaizar use el punto\n"))
         while valor!=".":
@@ -101,7 +99,7 @@ class Lista(Intermedio):
         Lista.insert(posicion, str(buscado1))
         print("La Lista ahora es\n"+ str(Lista))
    
-    def eliminarlista(valor):
+    def eliminarlista(valor=""):
         import re
         Lista1=[]
         while valor!=".":
